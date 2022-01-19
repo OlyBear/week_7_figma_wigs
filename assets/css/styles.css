@@ -1,0 +1,306 @@
+.header {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 14% 6fr 7fr 0.5fr 0.5fr;
+    grid-template-areas:
+        "hd_logo search_button hd_menu hd_basket hd_person";
+    align-items: center;
+    min-height: 143px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.hd_logo {
+    grid-area: hd_logo;
+    padding-left: 1.5em;
+}
+
+.search_button {
+    grid-area: search_button;
+    justify-self: start;
+    color: gray;
+}
+
+input {
+    border: none;
+    font-size: 12pt;
+    font-weight: 400;
+    color: #000;
+}
+
+.hd_menu {
+    grid-area: hd_menu;
+    justify-self: center;
+}
+
+.hd_produts,
+.hd_story,
+.hd_manufacturing,
+.hd_packaging {
+    margin: 1rem;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    color: #000;
+}
+
+.hd_basket {
+    grid-area: hd_basket;
+    justify-self: center;
+}
+
+.hd_person {
+    grid-area: hd_person;
+    justify-self: center;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 6fr;
+    grid-template-areas:
+        "aside content";
+    gap: 10px;
+}
+
+.aside {
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "explore"
+        "new-in"
+        "clothing"
+        "shoes"
+        "accessories"
+        "activ-wear"
+        "gifts"
+        "inspiration"
+        "help";
+    min-width: 14%;
+}
+
+.aside_explore {
+    grid-area: explore;
+    padding-left: 1em;
+    font-weight: 700;
+    font-size: 2em;
+    color: #000;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.aside_new_in {
+    grid-area: new-in;
+}
+
+.aside_clothing {
+    grid-area: clothing;
+}
+
+.aside_shoes {
+    grid-area: shoes;
+}
+
+.aside_accessories {
+    grid-area: accessories;
+}
+
+.aside_activ_wear {
+    grid-area: activ-wear;
+}
+
+.aside_gifts_and {
+    grid-area: gifts;
+}
+
+.aside_inspiration {
+    grid-area: inspiration;
+}
+
+.help,
+.aside_help,
+.help_center {
+    grid-area: help;
+    align-self: flex-end;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+
+.aside_new_in,
+.aside_clothing,
+.aside_shoes,
+.aside_accessories,
+.aside_activ_wear,
+.aside_gifts_and,
+.aside_inspiration {
+    padding-left: 2em;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 11pt;
+    font-weight: 600;
+    color: #000;
+}
+
+.main {
+    grid-area: content;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.main_sale_one {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+}
+
+.main_sale_one img,
+.main_sale_two img,
+.main_clothing img,
+.main_accessories img,
+.main_pink img,
+.main_turquoise img,
+.main_yellow img,
+.main_red img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.main_sale_two {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
+
+.main_clothing {
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+}
+
+.main_accessories {
+    grid-row: 1 / 3;
+    grid-column: 4 / 5;
+}
+
+.main_pink {
+    grid-row: 3 / 5;
+    grid-column: 1 / 2;
+}
+
+.main_turquoise {
+    grid-row: 3 / 5;
+    grid-column: 2 / 3;
+}
+
+.main_yellow {
+    grid-row: 3 / 4;
+    grid-column: 3 / 5;
+}
+
+.main_red {
+    grid-row: 4 / 5;
+    grid-column: 3 / 5;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 1em;
+        padding: 1em;
+        padding-bottom: 1em;
+        font-family: sans-serif;
+        font-weight: 400;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .footer {
+        display: none;
+    }
+
+    .header {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 14% 6fr 7fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "hd_logo search_button hd_menu hd_basket hd_person";
+        align-items: center;
+        min-height: 50px;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+
+    .container {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "aside aside"
+            "content content";
+        gap: 10px;
+    }
+
+    .aside {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "explore new-in clothing shoes accessories activ-wear gifts inspiration help";
+        min-width: 15%;
+    }
+
+    .aside_explore {
+        grid-area: explore;
+        padding-left: 1em;
+        font-weight: 600;
+        font-size: 1em;
+        color: #000;
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+
+    .aside_new_in,
+    .aside_clothing,
+    .aside_shoes,
+    .aside_accessories,
+    .aside_activ_wear,
+    .aside_gifts_and,
+    .aside_inspiration,
+    .help {
+        padding-left: 1em;
+        font-family: sans-serif;
+        text-decoration: none;
+        font-size: 9pt;
+        font-weight: 600;
+        color: #000;
+    }
+}
+
+.footer-cell1 {
+    background-color: #9F7FE8;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.footer-cell2 {
+    background-color: #FFE761;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.footer-cell3 {
+    background-color: #65DCE1;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.footer-cell4 {
+    background-color: #FC9CAB;
+    padding: 1em;
+    border-radius: 1em;
+}
